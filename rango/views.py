@@ -6,10 +6,13 @@ from rango.models import Page
 def index(request):
     # The - in -likes denotes that we would like to order them in descending order
     category_list = Category.objects.order_by('-likes')[:5]
+    page_list = Page.objects.order_by('-views')[:5]
+
 
     context_dict = {}
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
     context_dict['categories'] = category_list
+    context_dict['pages'] = page_list
 
     # Return a rendered response to send to the client
     # The first parameter is the template we wish to use
