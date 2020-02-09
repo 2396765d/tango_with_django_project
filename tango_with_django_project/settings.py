@@ -29,6 +29,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+LOGIN_URL = 'rango:login'
 
 # List of paths where static files will be served
 STATICFILES_DIRS = [STATIC_DIR, ]
